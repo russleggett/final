@@ -1,0 +1,40 @@
+<h1>'Welcome to the Purchase Request App</h1>
+
+<p>
+'Congrats you made it to the Purcahse Request App!
+
+Here you can sign in to make a purchasing request. It will then be sent to your manager for approval!
+
+Do exciting things such as:
+
+- Add a justification for your purchase!
+
+- Add a date you need the purcahse by!
+
+- Add multiple products to one order with fun, exciting attributes like
+
+	- Quantity!
+
+	- Cost!
+
+	- A vendor url! i.e. www.amazon.com!!
+
+Then head to the show (add a url here) page to view your requests, and their status as pending -.-, approved :), or rejected :/
+
+Approvers can do cool stuff too, like approving the requests, or rejecting them!
+
+
+YOU GOTTA BE LOGGED IN TO GET IN'
+
+</p>
+
+<br>
+
+    <% if user_signed_in? %>
+		<p>You are: <%= current_user.first_name %> <%= current_user.last_name %></p>
+        <li><%= link_to "Change your profile info?", edit_user_path(current_user) %></li>
+    <% else %>
+        <p>Seriously, log it in bruh</p> 
+    <% end %>
+
+

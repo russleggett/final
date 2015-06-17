@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  approval_amount: 1
+  their_supervisor: 1
+
+two:
+  user_id: 1
+  approval_amount: 1
+  their_supervisor: 1

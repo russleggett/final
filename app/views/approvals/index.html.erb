@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Approvals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Approver</th>
+      <th>Approved</th>
+      <th>Comments</th>
+      <th>Created at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @approvals.each do |approval| %>
+      <tr>
+        <td><%= approval.order_id %></td>
+        <td><%= approval.approver_id %></td>
+        <td><%= approval.approved %></td>
+        <td><%= approval.comments %></td>
+        <td><%= approval.created_at %></td>
+        <td><%= link_to 'Show', approval %></td>
+        <td><%= link_to 'Edit', edit_approval_path(approval) %></td>
+        <td><%= link_to 'Destroy', approval, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Approval', new_approval_path %>

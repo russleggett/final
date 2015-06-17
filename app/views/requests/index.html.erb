@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created by</th>
+      <th>Required by</th>
+      <th>Justification</th>
+      <th>First approver</th>
+      <th>Submitted</th>
+      <th>Final approval</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.created_by %></td>
+        <td><%= request.required_by %></td>
+        <td><%= request.justification %></td>
+        <td><%= request.first_approver_id %></td>
+        <td><%= request.submitted %></td>
+        <td><%= request.final_approval %></td>
+        <td><%= link_to 'Show', request %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request', new_request_path %>
